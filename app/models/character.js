@@ -2,7 +2,7 @@
 // =============================================================
 
 var Sequelize = require("sequelize");
-var sequelize = require("../config/connection.js");
+var sequelize = require("../config/config.js");
 
 var Player = sequelize.define("player", {
   routeName: Sequelize.STRING,
