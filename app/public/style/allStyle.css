@@ -1,0 +1,56 @@
+body {
+    background-color:  rgb(29, 29, 29);
+}
+.container {
+    width: 100%;
+    background-color: white;
+}
+a {
+    color: rgb(29, 29, 29);
+}
+a:hover {
+    color: white;
+}
+li:hover {
+    background-color: rgb(29, 29, 29);
+}
+
+#search {
+    width: 94%;
+    margin-left: 3%;
+}
+
+#createAccount {
+    padding-top: 5%;
+    width: 85%;
+    margin-left: 7.5%;
+}
+
+#toprank {
+    padding-top: 5%;
+    width: 85%;
+    margin-left: 7.5%;
+    font-family: 'Quantico', sans-serif;
+    
+}
+#tiptop {
+    font-size: 40px;
+    font-family: 'Black Ops One', cursive;
+}
+
+.well{
+    padding-left: 2%;
+    padding-bottom: 2%;
+    margin-bottom: 2%;
+    color: white;
+    background-color: rgb(29, 29, 29);
+}
+
+#chat {
+    font-size: 40px;
+    font-family: 'Black Ops One', cursive;
+}
+
+#add-btn {
+    background-color: black;
+}

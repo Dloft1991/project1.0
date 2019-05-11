@@ -1,0 +1,38 @@
+#map {
+    padding-top: 0px;
+    width: 94%;
+    margin-left: 3%;
+}
+#alias {
+    font-size: 40px;
+    font-family: 'Black Ops One', cursive;
+}
+#well-section {
+    font-family: 'Quantico', sans-serif;
+}
+/* all font 
+font-family: 'Black Ops One', cursive;
+font-family: 'Quantico', sans-serif;
+font-family: 'Staatliches', cursive; */
+
+#search-btn {
+    background-color: black;
+}
+
+
+/*socket.il*/
+* { margin: 0; padding: 0; box-sizing: border-box; }
+/* body { font: 13px Helvetica, Arial; } */
+
+/* form { background: #000;
+ padding: 3px; 
+ position: relative; 
+ bottom: 0; 
+ width: 35%;
+} */
+form input { border: 2; padding: 10px; width: 80%; border-color: black; margin-right: .5%;}
+form button { width: 18.3%; color: white; background: black; border: 2; border-color: black; padding: 10px;}
+#messages { list-style-type: none; margin: 0; padding: 0; }
+#messages li { padding: 5px 10px;
+width: 35%; } 
+#messages li:nth-child(odd) { background: #eee; }

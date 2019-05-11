@@ -1,0 +1,34 @@
+body {
+    background-color:  rgb(29, 29, 29);
+}
+.container {
+    width: 100%;
+    background-color: white;
+}
+a {
+    color: rgb(29, 29, 29);
+}
+a:hover {
+    color: white;
+}
+li:hover {
+    background-color: rgb(29, 29, 29);
+}
+.carousl {
+    width: 50%;
+    margin-left: 25%;
+    padding-top: 2%;
+}
+
+#signIN{
+   width: 52.2%;
+   margin-left: 24%;
+}
+
+#chat {
+    font-size: 40px;
+    font-family: 'Black Ops One', cursive;
+}
+#search-btn {
+    background-color: black;
+}

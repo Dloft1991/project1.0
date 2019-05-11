@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>King of the Court</title>
+  <!-- Latest compiled and minified CSS & JS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Black+Ops+One|Quantico|Staatliches" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style/mycourt.css">
+  <link rel="stylesheet" href="style/allStyle.css">
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+  <div class="container" >
+     <!--Nav bar-->
+     <ul class="nav justify-content-center">
+        <li class="nav-item">
+            <a class="nav-link active" href="view.html">Home</a>
+        </li>
+        <li class="nav-item">
+            <!--AKA ad  d New Player-->
+            <a class="nav-link" href="/add">Sign Up</a>
+          </li>
+        <li class="nav-item">
+          <!--AKA search player-->
+            <a class="nav-link" href="/">MyCourt</a>
+        </li>
+        <li class="nav-item">
+          <!--AKA All Players-->
+                <a class="nav-link" href="/all">Top Ranking</a>
+            </li>
+        </ul>
+        </div>
+    
+    <!-- show top rank-->
+    <div id="toprank"class="row">
+
+      <div class="col-lg-4">
+
+        <div class="card">
+          <div id="tiptop" class="card-header">
+            Top Ranking
+          </div>
+          <div class="card-body" id="well-section">
+
+            <!-- Content will go in here -->
+           
+          </div>
+          
+        </div>
+      </div>
+      <div class="col-lg-4">
+          <div class="card">
+              <div class="card-header" id="chat">
+                  <!-- Chat -->
+                  Chat (Public)
+              </div>
+              <div class="card-body" id="well-section">
+                  <!-- chat transcript -->
+                  Transcript
+                  <ul id="messages"></ul>
+              </div>
+              <form class="input" action="">
+                  <input id="m" autocomplete="off" /><button>Send</button>
+                </form>
+          </div>
+      </div>
+      <div class="col-lg-4">
+
+          <div class="card">
+            <div id="tiptop" class="card-header">
+              Challenges
+            </div>
+            <div class="card-body" id="bad-section">
+  
+              <!-- challenges will go in here -->
+             
+            </div>
+            
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <script src="js/all.js" type="text/javascript"></script>
+<script src="js/view.js" type="text/javascript"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</body>
+<!--socket.io-->
+<script>
+  $(function () {
+    var socket = io();
+    $('form').submit(function(e){
+      e.preventDefault(); // prevents page reloading
+      socket.emit('chat message', $('#m').val());
+      $('#m').val('');
+      return false;
+    });
+    socket.on('chat message', function(msg){
+      $('#messages').append($('<li>').text(msg));
+    });
+  });
+</script>
+</html>
